@@ -1,7 +1,7 @@
 {
-  "name": "nodebb-theme-quickstart",
+  "name": "nodebb-theme-slick-ct",
   "version": "0.1.0",
-  "description": "Enter a description here",
+  "description": "Slick theme with CT-specific changes",
   "main": "theme.less",
   "keywords": [],
   "license": "MIT",
