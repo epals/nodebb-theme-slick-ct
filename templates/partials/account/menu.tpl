@@ -1,9 +1,11 @@
 <div class="row account-menu">
 	<div class="col-xs-12">
 		<ul class="nav nav-pills pull-right">
-			<li>
-				<a href="{config.relative_path}/user/{userslug}" class="inline-block" id="profile">[[user:profile]]</a>
-			</li>
+			<!-- IF false -->
+				<li>
+					<a href="{config.relative_path}/user/{userslug}" class="inline-block" id="profile">[[user:profile]]</a>
+				</li>
+			<!-- ENDIF false -->
 			<!-- IF showHidden -->
 			<!-- IF false -->
 				<li><a href="{config.relative_path}/user/{userslug}/edit">[[user:edit]]</a></li>
