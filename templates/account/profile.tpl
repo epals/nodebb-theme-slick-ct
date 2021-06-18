@@ -63,6 +63,7 @@
 					<span class="stat-label">[[global:posts]]</span>
 				</div>
 
+				<!-- IF false -->
 				<div class="stat">
 					<div class="human-readable-number" title="{profileviews}">{profileviews}</div>
 					<span class="stat-label">[[user:profile_views]]</span>
@@ -77,6 +78,7 @@
 					<div class="human-readable-number" title="{followingCount}">{followingCount}</div>
 					<span class="stat-label">[[user:following]]</span>
 				</div>
+				<!-- ENDIF false -->
 			</div>
 
 			<div class="text-center profile-meta">
