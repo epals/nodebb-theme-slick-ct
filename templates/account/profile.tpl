@@ -81,33 +81,35 @@
 				<!-- ENDIF false -->
 			</div>
 
-			<div class="text-center profile-meta">
-				<span>[[user:joined]]</span>
-				<strong class="timeago" title="{joindateISO}"></strong>
+			<!-- IF false -->
+				<div class="text-center profile-meta">
+					<span>[[user:joined]]</span>
+					<strong class="timeago" title="{joindateISO}"></strong>
 
-				<span>[[user:lastonline]]</span>
-				<strong class="timeago" title="{lastonlineISO}"></strong><br />
+					<span>[[user:lastonline]]</span>
+					<strong class="timeago" title="{lastonlineISO}"></strong><br />
 
-				<!-- IF email -->
-				<span>[[user:email]]</span>
-				<strong><i class="fa fa-eye-slash {emailClass}" title="[[user:email_hidden]]"></i> {email}</strong>
-				<!-- ENDIF email -->
+					<!-- IF email -->
+					<span>[[user:email]]</span>
+					<strong><i class="fa fa-eye-slash {emailClass}" title="[[user:email_hidden]]"></i> {email}</strong>
+					<!-- ENDIF email -->
 
-				<!-- IF websiteName -->
-				<span>[[user:website]]</span>
-				<strong><a href="{websiteLink}" rel="nofollow noopener noreferrer">{websiteName}</a></strong>
-				<!-- ENDIF websiteName -->
+					<!-- IF websiteName -->
+					<span>[[user:website]]</span>
+					<strong><a href="{websiteLink}" rel="nofollow noopener noreferrer">{websiteName}</a></strong>
+					<!-- ENDIF websiteName -->
 
-				<!-- IF location -->
-				<span>[[user:location]]</span>
-				<strong>{location}</strong>
-				<!-- ENDIF location -->
+					<!-- IF location -->
+					<span>[[user:location]]</span>
+					<strong>{location}</strong>
+					<!-- ENDIF location -->
 
-				<!-- IF age -->
-				<span>[[user:age]]</span>
-				<strong>{age}</strong>
-				<!-- ENDIF age -->
-			</div>
+					<!-- IF age -->
+					<span>[[user:age]]</span>
+					<strong>{age}</strong>
+					<!-- ENDIF age -->
+				</div>
+			<!-- ENDIF false -->
 		</div>
 	</div>
 
@@ -133,19 +135,21 @@
 	</div>
 
 	<div class="row">
-		<div class="col-xs-6">
-			<h1 class="section-title">[[pages:account/best, {username}]]</h1>
+		<!-- IF false -->
+			<div class="col-xs-6">
+				<h1 class="section-title">[[pages:account/best, {username}]]</h1>
 
-			<!-- IF !bestPosts.length -->
-			<div class="alert alert-warning">[[user:has_no_posts]]</div>
-			<!-- ENDIF !bestPosts.length -->
+				<!-- IF !bestPosts.length -->
+				<div class="alert alert-warning">[[user:has_no_posts]]</div>
+				<!-- ENDIF !bestPosts.length -->
 
-			<div component="posts" class="posts-list">
-			{{{each bestPosts}}}
-			<!-- IMPORT partials/posts_list_item.tpl -->
-			{{{end}}}
+				<div component="posts" class="posts-list">
+				{{{each bestPosts}}}
+				<!-- IMPORT partials/posts_list_item.tpl -->
+				{{{end}}}
+				</div>
 			</div>
-		</div>
+		<!-- ENDIF false -->
 		<div class="col-xs-6">
 			<h1 class="section-title">[[pages:account/latest-posts, {username}]]</h1>
 
