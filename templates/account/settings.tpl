@@ -5,26 +5,28 @@
 
 	<div class="row">
 		<div class="col-xs-12">
-			<!-- IF allowUserHomePage -->
-			<h4>[[user:select-homepage]]</h4>
-			<div class="user-setting">
-				<div class="form-group">
-					<label for="dailyDigestFreq">[[user:homepage]]</label>
-					<select class="form-control" data-property="homePageRoute">
-						<option value="none">None</option>
-						<!-- BEGIN homePageRoutes -->
-						<option value="{homePageRoutes.route}" <!-- IF homePageRoutes.selected -->selected="1"<!-- ENDIF homePageRoutes.selected -->>{homePageRoutes.name}</option>
-						<!-- END homePageRoutes -->
-					</select>
-					<p class="help-block">[[user:homepage_description]]</p>
+			<!-- IF false -->
+				<!-- IF allowUserHomePage -->
+				<h4>[[user:select-homepage]]</h4>
+				<div class="user-setting">
+					<div class="form-group">
+						<label for="dailyDigestFreq">[[user:homepage]]</label>
+						<select class="form-control" data-property="homePageRoute">
+							<option value="none">None</option>
+							<!-- BEGIN homePageRoutes -->
+							<option value="{homePageRoutes.route}" <!-- IF homePageRoutes.selected -->selected="1"<!-- ENDIF homePageRoutes.selected -->>{homePageRoutes.name}</option>
+							<!-- END homePageRoutes -->
+						</select>
+						<p class="help-block">[[user:homepage_description]]</p>
+					</div>
+					<div id="homePageCustom" class="form-group" style="display: none;">
+						<label for="homePageCustom">[[user:custom_route]]</label>
+						<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" value="{settings.homePageRoute}"/>
+						<p class="help-block">[[user:custom_route_help]]</p>
+					</div>
 				</div>
-				<div id="homePageCustom" class="form-group" style="display: none;">
-					<label for="homePageCustom">[[user:custom_route]]</label>
-					<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" value="{settings.homePageRoute}"/>
-					<p class="help-block">[[user:custom_route_help]]</p>
-				</div>
-			</div>
-			<!-- ENDIF allowUserHomePage -->
+				<!-- ENDIF allowUserHomePage -->
+			<!-- ENDIF false  -->
 
 			<h4>[[user:browsing]]</h4>
 			<div class="user-setting">
@@ -162,6 +164,7 @@
 				<!-- ENDIF isAdmin -->
 			</div>
 
+			<!-- IF false -->
 			<h4>[[user:notifications]]</h4>
 			<div class="user-setting">
 				<!-- BEGIN notificationSettings -->
@@ -191,6 +194,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- ENDIF false -->
 
 			<!-- BEGIN customSettings -->
 			<h4>{customSettings.title}</h4>
