@@ -28,6 +28,32 @@
 				<!-- ENDIF allowUserHomePage -->
 			<!-- ENDIF false  -->
 
+			<h4>[[global:privacy]]</h4>
+			<div class="user-setting">
+				<!-- IF !hideEmail -->
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-property="showemail" <!-- IF settings.showemail -->checked <!-- ENDIF settings.showemail -->/><i class="input-helper"></i> <strong>[[user:show_email]]</strong>
+					</label>
+				</div>
+				<!-- ENDIF !hideEmail -->
+				<!-- IF !hideFullname -->
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-property="showfullname" <!-- IF settings.showfullname -->checked<!-- ENDIF settings.showfullname -->/><i class="input-helper"></i> <strong>[[user:show_fullname]]</strong>
+					</label>
+				</div>
+				<!-- ENDIF !hideFullname -->
+
+				<!-- IF !config.disableChat -->
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/><i class="input-helper"></i> <strong>[[user:restrict_chats]]</strong>
+					</label>
+				</div>
+				<!-- ENDIF !config.disableChat -->
+			</div>
+
 			<h4>[[user:browsing]]</h4>
 			<div class="user-setting">
 				<div class="checkbox">
@@ -55,31 +81,7 @@
 				</div>
 			</div>
 
-			<h4>[[global:privacy]]</h4>
-			<div class="user-setting">
-				<!-- IF !hideEmail -->
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="showemail" <!-- IF settings.showemail -->checked <!-- ENDIF settings.showemail -->/><i class="input-helper"></i> <strong>[[user:show_email]]</strong>
-					</label>
-				</div>
-				<!-- ENDIF !hideEmail -->
-				<!-- IF !hideFullname -->
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="showfullname" <!-- IF settings.showfullname -->checked<!-- ENDIF settings.showfullname -->/><i class="input-helper"></i> <strong>[[user:show_fullname]]</strong>
-					</label>
-				</div>
-				<!-- ENDIF !hideFullname -->
 
-				<!-- IF !config.disableChat -->
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/><i class="input-helper"></i> <strong>[[user:restrict_chats]]</strong>
-					</label>
-				</div>
-				<!-- ENDIF !config.disableChat -->
-			</div>
 
 			<!-- IF !disableEmailSubscriptions -->
 			<h4>[[global:email]]</h4>
