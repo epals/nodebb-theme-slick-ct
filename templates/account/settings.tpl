@@ -54,6 +54,7 @@
 				<!-- ENDIF !config.disableChat -->
 			</div>
 
+			<!-- IF false -->
 			<h4>[[user:browsing]]</h4>
 			<div class="user-setting">
 				<div class="checkbox">
@@ -80,6 +81,7 @@
 					</label>
 				</div>
 			</div>
+			<!-- ENDIF false -->
 
 
 
@@ -98,6 +100,7 @@
 			</div>
 			<!-- ENDIF !disableEmailSubscriptions -->
 
+			<!-- IF false -->
 			<h4>[[topic:watch]]</h4>
 			<div class="user-setting">
 				<div class="checkbox">
@@ -119,6 +122,7 @@
 					</select>
 				</div>
 			</div>
+			<!-- ENDIF false -->
 
 			<h4>[[global:pagination]]</h4>
 			<div class="user-setting">
